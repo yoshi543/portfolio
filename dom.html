@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM</title>
+        <meta charset="utf-8">
+        <script>
+            // ここに JavaScript のコードを書きます。
+            function addItem(){
+            const text = document.getElementById('name');
+            const value = text.value;
+
+            const element = document.createElement('li');
+            element.innerHTML = value;
+
+            const list = document.getElementById('list');
+            list.appendChild(element);
+
+            text.value='';
+        }
+        </script>
+    </head>
+    <body>
+        <ul id="list">
+            <li>項目1</li>
+        </ul>
+        <input id="name" type="text">
+        <button onclick="addItem();">追加</button>
+    </body>
+</html>
